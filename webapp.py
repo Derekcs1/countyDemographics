@@ -31,5 +31,5 @@ def func():
      
 
 
-if __name__=="__home__":
+if __name__=="__main__":
      app.run(debug=False, port=54321)

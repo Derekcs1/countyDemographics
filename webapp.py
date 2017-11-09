@@ -6,14 +6,12 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 
 @app.route("/")
 def render_main():
-     render_template('home.html')
-     """
-    with open('static/county_demographics.json') as demographicsdata
-        counties = json.load(demographicsdata)
-    if 'State' in request.args:
-        sel_state = request.args["State"]
-        return render_template('home.html', response_options = get_state_options(counties), fact = func(), response_state = sel_state)
-    return render_template('home.html', response_options = get_state_options(counties))
+     with open('static/county_demographics.json') as demographicsdata
+     counties = json.load(demographicsdata)
+     if 'State' in request.args:
+          sel_state = request.args["State"]
+     return render_template('home.html', response_options = get_state_options(counties), fact = func(), response_state = sel_state)
+     return render_template('home.html', response_options = get_state_options(counties))
 
 
 def get_state_options(counties):
@@ -26,9 +24,8 @@ def get_state_options(counties):
      return options
 
 def func():
-    
     return str(1) 
-"""
+
      
 
 

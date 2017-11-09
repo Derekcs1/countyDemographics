@@ -16,13 +16,13 @@ def render_main():
 
 
 def get_state_options(counties):
-    states = []
-    options = ""
-    for c in counties:
-        if c["State"] not in states:
-            states.append(c["State"])
-            options += Markup("<option value=\"" + c["State"] + "\">" + c["State"] + "</option>")
-    return options
+     states = []
+     options = ""
+     for c in counties:
+          if c["State"] not in states:
+               states.append(c["State"])
+               options += Markup("<option value=\"" + c["State"] + "\">" + c["State"] + "</option>")
+     return options
 
 def func():
     
@@ -31,4 +31,4 @@ def func():
 
 
 if __name__=="__home__":
-    app.run(debug=False, port=54321)
+     app.run(debug=False, port=54321)
